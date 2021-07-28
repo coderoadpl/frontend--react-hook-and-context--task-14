@@ -5,6 +5,10 @@ export class TextFieldWithFocus extends React.Component {
 
   componentDidMount () {
     console.log(this.inputRef)
+
+    const inputDOMElement = this.inputRef.current
+
+    inputDOMElement.focus()
   }
 
   render () {
