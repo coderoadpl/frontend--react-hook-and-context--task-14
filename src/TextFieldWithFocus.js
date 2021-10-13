@@ -1,26 +1,24 @@
 import React from 'react'
 
-export class TextFieldWithFocus extends React.Component {
-  inputRef = React.createRef()
+export const TextFieldWithFocus = () => {
+  // inputRef = React.createRef()
 
-  componentDidMount () {
-    console.log(this.inputRef)
+  // componentDidMount () {
+  //   console.log(this.inputRef)
 
-    const inputDOMElement = this.inputRef.current
+  //   const inputDOMElement = this.inputRef.current
 
-    inputDOMElement.focus()
-  }
+  //   inputDOMElement.focus()
+  // }
 
-  render () {
-    console.log(this.inputRef)
+  //   console.log(this.inputRef)
 
-    return (
-      <input
-        ref={this.inputRef}
-        type={'text'}
-      />
-    )
-  }
+  return (
+    <input
+      // ref={this.inputRef}
+      type={'text'}
+    />
+  )
 }
 
 export default TextFieldWithFocus
