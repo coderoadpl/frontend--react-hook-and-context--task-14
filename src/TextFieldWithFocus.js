@@ -1,21 +1,21 @@
 import React from 'react'
 
 export const TextFieldWithFocus = () => {
-  // inputRef = React.createRef()
+  const inputRef = React.useRef()
 
-  // componentDidMount () {
-  //   console.log(this.inputRef)
+  console.log(inputRef)
 
-  //   const inputDOMElement = this.inputRef.current
+  React.useEffect(() => {
+    console.log(inputRef)
 
-  //   inputDOMElement.focus()
-  // }
+    const inputDOMElement = inputRef.current
 
-  //   console.log(this.inputRef)
+    inputDOMElement.focus()
+  }, [])
 
   return (
     <input
-      // ref={this.inputRef}
+      ref={inputRef}
       type={'text'}
     />
   )
